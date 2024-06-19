@@ -1,10 +1,10 @@
 {
-  "name": "nes-react",
+  "name": "@fightingdreamer/nes-react",
   "version": "1.0.2",
   "description": "React component library for nes.css",
   "author": "bschulte",
   "license": "MIT",
-  "repository": "bschulte/nes-react",
+  "repository": "fightingdreamer/nes-react",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -17,20 +17,20 @@
     "test:watch": "react-scripts-ts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "dev": "npm start",
-    "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
+    "dev": "bun start",
+    "prepare": "bun run build",
+    "predeploy": "cd example && bun install && bun run build",
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
     "@types/classnames": "^2.2.6",
     "classnames": "^2.2.6",
-    "node-sass": "^4.11.0"
+    "node-sass": "^9.0.0"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": "^15.0.0 || ^16.0.0 || ^18.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
@@ -63,5 +63,8 @@
     "nes.css",
     "component library",
     "components"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
